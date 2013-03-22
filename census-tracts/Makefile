@@ -11,4 +11,4 @@ census-tracts.json: tl_2012_42_tract.shp
 	ogr2ogr -f "GeoJSON" -t_srs "EPSG:4326" -where "COUNTYFP = '101'" census-tracts.json tl_2012_42_tract.shp
 
 census-tracts-topo.json: census-tracts.json
-		topojson -o census-tracts-topo.json --id-property NAME census-tracts.json
+	topojson -o census-tracts-topo.json --id-property NAME census-tracts.json
