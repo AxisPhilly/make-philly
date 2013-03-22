@@ -1,9 +1,9 @@
 all: phila-city_limits_shp.zip city_limits.shp city-limits.json city-limits-topo.json
 
-phila-city_limits_shp.zip:
-	curl -o phila-city_limits_shp.zip http://www.pasda.psu.edu/philacity/data/phila-city_limits_shp.zip
+city-limits.zip:
+	curl -o city-limits.zip http://www.pasda.psu.edu/philacity/data/phila-city_limits_shp.zip
 
-city_limits.shp: phila-city_limits_shp.zip
+city_limits.shp: city-limits.zip
 	unzip phila-city_limits_shp.zip
 	touch city_limits.shp
 
