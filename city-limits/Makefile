@@ -4,7 +4,7 @@ city-limits.zip:
 	curl -o city-limits.zip http://www.pasda.psu.edu/philacity/data/phila-city_limits_shp.zip
 
 city_limits.shp: city-limits.zip
-	unzip phila-city_limits_shp.zip
+	unzip city-limits.zip
 	touch city_limits.shp
 
 city-limits.json: city_limits.shp
